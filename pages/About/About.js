@@ -10,6 +10,10 @@ export default function About() {
     modal:true,
   });
 
+  const PlayAudio = () => {
+    const audio = new Audio("/hoverAudio.wav");
+    audio.play();
+  }
 
   const infoApi = useContext(PrismicContext)
 
