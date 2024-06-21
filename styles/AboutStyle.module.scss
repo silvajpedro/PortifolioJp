@@ -65,23 +65,23 @@
   .HabilitiesTitle {
     font-size: 3vw;
     text-align: center;
-    margin-top: 5vh;
+    letter-spacing: 2px;
+    margin-top: 3vh;
   }
   
   // TecnologiesBox
   .TecnologiesBox {
     @include DisplayFlexCustom();
     height: 70vh;
-    border: solid purple;
   }
   
   // TecnologiesImages
   .TecnologiesImages {
     @include DisplayFlexCustom(space-around);
     flex-wrap: wrap;
-    width: 42.5%;
+    width: 42%;
     height: 66vh;
-    border: solid red;
+    margin-top: 5vh
   }
   
   // TecnologiesDescription
@@ -92,7 +92,6 @@
     width: 55%;
     height: 48vh;
     margin-right: 1.5vw;
-    border: solid yellow;
     h2,
     p {
       font-family: "Dosis", sans-serif;

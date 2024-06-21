@@ -5,6 +5,7 @@ import { useFirstPrismicDocument } from "@prismicio/react";
 import styles from "../styles/IndexStyle.module.scss"
 import Typing from "./Typing/Typing";
 import About from "./About/About";
+import Projects from "./Projects/Projects"
 
 export default function Home() {
 
@@ -24,6 +25,7 @@ export default function Home() {
           <section className={styles.ContentBox}>
           <Typing FirstSentence="Oi, eu sou o João" SecondSentence="Desenvolvedor front-end."/>
           <About/>
+          <Projects/>
           </section>
         </main>
       </PrismicContext.Provider>

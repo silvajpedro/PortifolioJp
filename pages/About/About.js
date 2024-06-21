@@ -10,11 +10,6 @@ export default function About() {
     modal:true,
   });
 
-  const PlayAudio = () => {
-    const audio = new Audio("/hoverAudio.wav");
-    audio.play();
-  }
-
   const infoApi = useContext(PrismicContext)
 
 console.log(infoApi)
@@ -65,9 +60,7 @@ console.log(infoApi)
                 // a informação condizente com as tecnologias
                  onMouseOut={()=>{setGuardaId({modal:true, id:null})}}
                  onMouseOver={()=>{
-                  setGuardaId({id:item.id, modal:false})
-                  PlayAudio()
-                }} 
+                  setGuardaId({id:item.id, modal:false})}} 
                  key={item.id} 
                  style={{backgroundImage:`url(${item.lightimage.url})`}}>
                   <Image 
