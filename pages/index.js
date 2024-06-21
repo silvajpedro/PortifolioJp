@@ -9,6 +9,7 @@ import About from "./About/About";
 export default function Home() {
 
   const [document] = useFirstPrismicDocument();
+  
   return (
     <>
       <PrismicContext.Provider value={document}>

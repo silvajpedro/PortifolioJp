@@ -71,7 +71,7 @@
   // TecnologiesBox
   .TecnologiesBox {
     @include DisplayFlexCustom();
-    height: 75vh;
+    height: 70vh;
     border: solid purple;
   }
   
@@ -92,22 +92,23 @@
     width: 55%;
     height: 48vh;
     margin-right: 1.5vw;
-  
+    border: solid yellow;
     h2,
     p {
       font-family: "Dosis", sans-serif;
+      font-weight: 600;
     }
   
     h2 {
       position: relative;
       top: -3vh;
-      font-size: 3.2vw;
+      font-size: 3.5vw;
     }
   
     p {
-      font-size: 2.30vw;
-      line-height: 38px;
-      text-align: justify;
+      font-size: 2.35vw;
+      line-height: 5.35vh;
+      letter-spacing: 0.5px;
       padding: 10px;
     }
   }

@@ -10,6 +10,7 @@ export default function About() {
     modal:true,
   });
 
+
   const infoApi = useContext(PrismicContext)
 
 console.log(infoApi)
@@ -29,6 +30,7 @@ console.log(infoApi)
             className={styles.JoaoImage} 
             width={720}
             height={750}
+            priority
             src="/coding.png" alt="ilustração do joão" />
           </figure>
           
@@ -48,7 +50,7 @@ console.log(infoApi)
               
               <h2>{guardaId.modal === true ? "" : infoApi.data.body1[0].items[guardaId.id].titulo_habilidades[0].text}</h2>
               
-              <p>{ guardaId.modal === true ? "Passe o mouse no card para ler" : infoApi.data.body1[0].items[guardaId.id].texto_habilidade[0].text}</p>
+              <p>{ guardaId.modal === true ? "Passe o mouse nos cards para ler" : infoApi.data.body1[0].items[guardaId.id].texto_habilidade[0].text}</p>
             
             </div>
             <div className={styles.TecnologiesImages}>
@@ -58,7 +60,10 @@ console.log(infoApi)
                 // aqui o id que vem do map está sendo guardado na const guardaId para mostrar
                 // a informação condizente com as tecnologias
                  onMouseOut={()=>{setGuardaId({modal:true, id:null})}}
-                 onMouseOver={()=>{setGuardaId({id:item.id, modal:false})}} 
+                 onMouseOver={()=>{
+                  setGuardaId({id:item.id, modal:false})
+                  PlayAudio()
+                }} 
                  key={item.id} 
                  style={{backgroundImage:`url(${item.lightimage.url})`}}>
                   <Image 
