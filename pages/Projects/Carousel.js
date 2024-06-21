@@ -13,7 +13,6 @@ export default function Carrosel({ children }) {
             infiniteLoop={true}
             autoPlay={true}
             className={styles.Carrosel}
-
         >
 
             {children}
