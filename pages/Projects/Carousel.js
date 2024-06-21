@@ -11,7 +11,7 @@ export default function Carrosel({ children }) {
             showThumbs={false}
             showArrows={false}
             infiniteLoop={true}
-            autoPlay={true}
+            // autoPlay={true}
             className={styles.Carrosel}
         >
 

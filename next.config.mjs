@@ -5,6 +5,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'images.prismic.io',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'silvajpedro.cdn.prismic.io',
         pathname: '/**',
       },
@@ -15,4 +20,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-

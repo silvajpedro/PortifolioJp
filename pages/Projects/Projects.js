@@ -2,6 +2,7 @@ import Carrosel from "./Carousel.js"
 import PrismicContext from "../api/prismic"
 import { useContext } from "react"
 import styles from "../../styles/ProjectsStyle.module.scss"
+import Image from "next/image.js"
 
 export default function Projects() {
 
@@ -30,7 +31,10 @@ export default function Projects() {
                     {infoApi.data.body[0].items.map((item, id) => (
                         <figure key={id}>
 
-                            <img src={item.imagem_projeto.url} alt="imagem dos projetos do joao" />
+                            <Image 
+                            width={1651}
+                            height={1011}
+                            src={item.imagem_projeto.url} alt="imagem dos projetos do joao" />
 
                             <div className={styles.DescriptionProject}>
 
