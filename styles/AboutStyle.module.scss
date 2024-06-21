@@ -1,0 +1,143 @@
+// Global Styles
+@mixin DisplayFlexCustom($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+  }
+  
+  // AboutMeBox
+  .AboutMeBox {
+    display: flex;
+    height: 90vh;
+    /* border: solid red; */
+  }
+  
+  // MyImageBox
+  .MyImageBox {
+    @include DisplayFlexCustom(center, flex-start);
+    /* border: solid red; */
+    width: 41vw;
+  
+    img {
+      height: 77vh;
+      width: 38vw;
+      border-radius: 10px;
+      padding-left: 2vw;
+      object-fit: scale-down;
+    }
+  }
+  
+  // DescriptionBox
+  .DescriptionBox {
+    @include DisplayFlexCustom();
+    flex-direction: column;
+    width: 50vw;
+    height: 80vh;
+    text-align: justify;
+    /* border: solid; */
+  }
+  
+  // AboutMeTitle
+  .AboutMeTitle {
+    font-size: 3vw;
+    letter-spacing: 1px;
+    margin-bottom: 2.5vh;
+  }
+  
+  // AboutMeText
+  .AboutMeText {
+    width: 92%;
+    font-size: 2.1vw;
+    /* word-spacing: -6px; */
+    letter-spacing: 1.25px;
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    line-height: 4.92vh;
+    /* border: solid purple; */
+  }
+  
+  // HabilitiesBox
+  .HabilitiesBox {
+    height: 95vh;
+  }
+  
+  // HabilitiesTitle
+  .HabilitiesTitle {
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 5vh;
+  }
+  
+  // TecnologiesBox
+  .TecnologiesBox {
+    @include DisplayFlexCustom();
+    height: 75vh;
+    border: solid purple;
+  }
+  
+  // TecnologiesImages
+  .TecnologiesImages {
+    @include DisplayFlexCustom(space-around);
+    flex-wrap: wrap;
+    width: 42.5%;
+    height: 66vh;
+    border: solid red;
+  }
+  
+  // TecnologiesDescription
+  .TecnologiesDescription {
+    @include DisplayFlexCustom();
+    flex-direction: column;
+    text-align: center;
+    width: 55%;
+    height: 48vh;
+    margin-right: 1.5vw;
+  
+    h2,
+    p {
+      font-family: "Dosis", sans-serif;
+    }
+  
+    h2 {
+      position: relative;
+      top: -3vh;
+      font-size: 3.2vw;
+    }
+  
+    p {
+      font-size: 2.30vw;
+      line-height: 38px;
+      text-align: justify;
+      padding: 10px;
+    }
+  }
+  
+  // HabilitiesImage
+  .HabilitiesImage {
+    width: 8vw;
+    height: 14vh;
+    visibility: "initial";
+}
+  
+  // FigureHabilities
+  .FigureHabilities {
+    @include DisplayFlexCustom();
+    height: 18.5vh;
+    width: 9.5vw;
+    border-radius: 10px 20px 0px;
+    background-color: #c4c4c4;
+    transition: ease 0.3s;
+    background-position: center;
+    background-size: 74%;
+    filter: grayscale(100%);
+    background-repeat: no-repeat;
+  
+    &:hover {
+      transform: scale(105%);
+      object-fit: cover;
+      background-color: #000;
+      border: solid 2px #00b100;
+      filter: none;
+    }
+  }
+  

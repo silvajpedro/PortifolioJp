@@ -1,0 +1,20 @@
+{
+  "name": "portfoliojp2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prismicio/client": "^7.6.0",
+    "@prismicio/react": "^2.8.0",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.77.6",
+    "sharp": "^0.33.4"
+  }
+}
