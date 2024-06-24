@@ -1,6 +1,6 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import styles from "../../styles/ProjectsStyle.module.scss"
+import styles from "../../../styles/ProjectsStyle.module.scss"
 
 export default function Carrosel({ children }) {
 
@@ -11,7 +11,8 @@ export default function Carrosel({ children }) {
             showThumbs={false}
             showArrows={false}
             infiniteLoop={true}
-            // autoPlay={true}
+            autoPlay={true}
+            interval={4000}
             className={styles.Carrosel}
         >
 

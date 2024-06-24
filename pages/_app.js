@@ -1,13 +1,16 @@
 import { PrismicProvider } from "@prismicio/react";
-import { client } from "./api/prismic";
+import { client } from "./Components/api/prismic";
 import "../styles/GlobalStyle.scss"
+import PrismicConfig from "./Components/api/PrismicConfig";
 
 export default function App({ Component, pageProps }) {
-  return(
+  return (
     <>
-    <PrismicProvider client={client}>
-      <Component {...pageProps} />
-    </PrismicProvider>
+      <PrismicProvider client={client}>
+        <PrismicConfig>
+          <Component {...pageProps} />
+        </PrismicConfig>
+      </PrismicProvider>
     </>
   )
 }

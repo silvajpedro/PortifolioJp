@@ -1,5 +1,5 @@
 import { useState, useEffect, memo } from "react";
-import styles from "../../styles/TypingStyle.module.scss";
+import styles from "../../../styles/TypingStyle.module.scss";
 import Image from "next/image";
 
 function Typing({ FirstSentence = "", SecondSentence = "" }) {
