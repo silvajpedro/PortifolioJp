@@ -1,4 +1,4 @@
-import styles from "../../../styles/HeaderStyle.module.scss";
+import styles from "../../styles/HeaderStyle.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,10 +17,10 @@ export default function Header() {
             <Link href={"/"}>Início</Link>
             </li>
           <li className={styles.Link}>
-            <Link href={"/Components/About/About"}>Sobre</Link>
+            <Link href={"/About/About"}>Sobre</Link>
           </li>
           <li className={styles.Link}>
-            <Link href={"/Components/Projects/Projects"}>Projetos</Link>
+            <Link href={"/Projects/Projects"}>Projetos</Link>
           </li>
         </ul>
       </nav>

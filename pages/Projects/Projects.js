@@ -1,7 +1,7 @@
 import Carrosel from "./Carousel.js"
-import PrismicContext from "../api/prismic.js"
+import PrismicContext from "../../Components/api/_prismic.js"
 import { useContext } from "react"
-import styles from "../../../styles/ProjectsStyle.module.scss"
+import styles from "../../styles/ProjectsStyle.module.scss"
 import Image from "next/image.js"
 import Header from "../Header/Header.js"
 

@@ -1,4 +1,4 @@
-import PrismicContext from "./prismic.js";
+import PrismicContext from "./_prismic";
 import { useFirstPrismicDocument } from "@prismicio/react";
 
 export default function PrismicConfig({children}) {

@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
-import PrismicContext from "../api/prismic.js";
+import PrismicContext from "../../Components/api/_prismic";
 import Image from "next/image.js";
-import styles from "../../../styles/AboutStyle.module.scss"
+import styles from "../../styles/AboutStyle.module.scss"
 import Header from "../Header/Header.js";
-import Loading from "../Loading/Loading.js";
+import Loading from "../Loading/Loading";
 
 export default function About({ data }) {
 

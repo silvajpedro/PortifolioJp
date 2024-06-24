@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "./Components/Header/Header";
-import Typing from "./Components/Typing/Typing";
+import Header from "./Header/Header";
+import Typing from "./Typing/Typing";
 
 export default function Home() {
 
