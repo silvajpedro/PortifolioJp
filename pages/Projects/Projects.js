@@ -12,22 +12,23 @@ export default function Projects() {
 
     const infoApi = useContext(PrismicContext)
 
-    if (!infoApi) {
-        return (
+    if (!infoApi || !infoApi.data) {
+        return(
             <Loading/>
-        )
+        );
     }
 
     return (
         <>
-        <Head>
-            <title>Projetos</title>
-            <link rel="icon" href="../favicon.ico" />
-        </Head>
-            
+            <Head>
+                <title>Projetos</title>
+                <link rel="icon" href="../favicon.ico" />
+            </Head>
+
             <Header />
 
             <main className="MainBox">
+                
                 <section className="ContentBox">
 
                     <section className={styles.CarroselBox}>
@@ -36,13 +37,14 @@ export default function Projects() {
                         <Carrosel className={styles.Carrosel}>
 
                             {infoApi.data.body[0].items.map((item, id) => (
-                                
+
                                 <figure key={id}>
 
                                     <Image
                                         width={1651}
                                         height={1011}
-                                        src={item.imagem_projeto.url} alt="imagem dos projetos do joao" />
+                                        src={item.imagem_projeto.url} alt="imagem dos projetos do joao"
+                                    />
 
                                     <div className={styles.DescriptionProject}>
 
@@ -61,14 +63,14 @@ export default function Projects() {
                         </Carrosel>
                     </section>
 
-                    <Contact/>
-                
-                <address className={styles.AddressInfo}>
-                    <p>Desenvolvido por {"<Joao Pedro Belo/>"}</p>
-                </address>
-                
+                    <Contact />
+
+                    <address className={styles.AddressInfo}>
+                        <p>Desenvolvido por {"<Joao Pedro Belo/>"}</p>
+                    </address>
+
                 </section>
-            
+
             </main>
         </>
     )

@@ -13,7 +13,7 @@ export default function Contact() {
     setTimeout(() => {
       setHour(new Date().toLocaleTimeString("pt-BR"))
     }, 1000)
-  }, hour)
+  }, [hour])
 
   return (
     <section className={styles.PhoneBox}>
@@ -35,7 +35,7 @@ export default function Contact() {
           alt="tela de celular" />
 
         { !modalCellPhone && <nav>
-          
+
           <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-belo/" target="_blank">
             <img src="/Linkedin.svg" className={styles.ContactImages} alt="icone contato Linkedin" />
           </a>

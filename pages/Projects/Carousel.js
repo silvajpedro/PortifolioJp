@@ -13,10 +13,10 @@ export default function Carrosel({ children }) {
             infiniteLoop={true}
             autoPlay={true}
             interval={4000}
-            className={styles.Carrosel}
-        >
-
+            className={styles.Carrosel}>
+        
             {children}
+        
         </Carousel>
     )
 }

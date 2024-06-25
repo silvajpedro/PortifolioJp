@@ -15,11 +15,11 @@ export default function About() {
 
   const infoApi = useContext(PrismicContext)
 
-  if (!infoApi) {
-    return (
-      <Loading />
-    )
-  }
+  if (!infoApi || !infoApi.data) {
+    return(
+        <Loading/>
+    );
+}
 
   return (
     <>
@@ -103,10 +103,8 @@ export default function About() {
 
           </section>
 
-        <Loading />
-
         </section>
-        
+
       </main>
     </>
   );

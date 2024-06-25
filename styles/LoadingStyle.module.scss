@@ -1,6 +1,10 @@
 @use "./variables";
 
 .LoadingBox{
-    border: solid;
     @include variables.DisplayFlexCustom();
+    height: 84vh;
+    img{
+        height: 45vh;
+        object-fit: contain;
+    }
 }
