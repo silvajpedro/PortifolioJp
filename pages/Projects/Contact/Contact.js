@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Contact() {
 
-  const [modalCellPhone, setModalCellPhone] = useState(false);
+  const [modalCellPhone, setModalCellPhone] = useState(true);
   const [hour, setHour] = useState(new Date().toLocaleTimeString("pt-BR"))
 
   const today = new Date().toLocaleDateString("pt-BR");
