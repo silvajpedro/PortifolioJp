@@ -1,14 +1,4 @@
-// Variables
-$DefaultText: #ffff;
-$DinamicText: #00b100;
-$Binary_background: url('../public/Binary_background.jpg');
-
-// Mixins
-@mixin DisplayFlexCustom($justify: center, $align: center) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-}
+@use "./variables";
 
 // Global Styles
 * {
@@ -22,7 +12,7 @@ $Binary_background: url('../public/Binary_background.jpg');
 }
 
 body {
-  background-image: $Binary_background;
+  background-image: variables.$Binary_background;
   background-size: 100%;
   background-repeat: repeat-y;
   background-position: 0 10vh;
@@ -37,8 +27,8 @@ body {
 .MainBox {
   position: relative;
   top: 13.4vh;
-  @include DisplayFlexCustom();
-  color: $DinamicText;
+  @include variables.DisplayFlexCustom();
+  color: variables.$DinamicText;
 }
 
 .ContentBox {

@@ -1,15 +1,8 @@
-$default-text: #ffff;
-$dinamic-text: #00b100;
-
-@mixin display-flex-custom($justify: center, $align: center) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-}
+@use "./variables";
 
 .HeaderBoxStyle {
   width: 100%;
-  @include display-flex-custom(none, center);
+  @include variables.DisplayFlexCustom(none, center);
   position: fixed;
   z-index: 10;
   background: rgba(255, 255, 255, 0.05);
@@ -18,7 +11,6 @@ $dinamic-text: #00b100;
   -webkit-backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   height: 10vh;
-  // border:solid red;
 
   nav {
     width: 100%;
@@ -26,9 +18,8 @@ $dinamic-text: #00b100;
 }
 
 .ul {
-  @include display-flex-custom(space-evenly, center);
+  @include variables.DisplayFlexCustom(space-evenly, center);
   list-style: none;
-  // border: solid yellow;
 
   img {
     position: relative;
@@ -52,9 +43,9 @@ $dinamic-text: #00b100;
     pointer;
   letter-spacing: 1px;
   a {
-    color: $default-text;
+    color: variables.$DefaultText;
     &:hover {
-      color: $dinamic-text;
+      color: variables.$DinamicText;
       text-shadow: black -3px 0, black 3px 0;
     }
   }

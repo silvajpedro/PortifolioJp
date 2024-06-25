@@ -1,20 +1,15 @@
-// Global Styles
-@mixin DisplayFlexCustom($justify: center, $align: center) {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-  }
+@use "./variables";
   
   // AboutMeBox
   .AboutMeBox {
     display: flex;
     height: 90vh;
-    color: #00b100;;
+    color: variables.$DinamicText;
   }
   
   // MyImageBox
   .MyImageBox {
-    @include DisplayFlexCustom(center, flex-start);
+    @include variables.DisplayFlexCustom(center, flex-start);
     /* border: solid red; */
     width: 41vw;
   
@@ -29,12 +24,11 @@
   
   // DescriptionBox
   .DescriptionBox {
-    @include DisplayFlexCustom();
+    @include variables.DisplayFlexCustom();
     flex-direction: column;
     width: 50vw;
     height: 80vh;
     text-align: justify;
-    /* border: solid; */
   }
   
   // AboutMeTitle
@@ -71,13 +65,13 @@
   
   // TecnologiesBox
   .TecnologiesBox {
-    @include DisplayFlexCustom();
+    @include variables.DisplayFlexCustom();
     height: 70vh;
   }
   
   // TecnologiesImages
   .TecnologiesImages {
-    @include DisplayFlexCustom(space-around);
+    @include variables.DisplayFlexCustom(space-around);
     flex-wrap: wrap;
     width: 42%;
     height: 66vh;
@@ -86,7 +80,7 @@
   
   // TecnologiesDescription
   .TecnologiesDescription {
-    @include DisplayFlexCustom();
+    @include variables.DisplayFlexCustom();
     flex-direction: column;
     text-align: center;
     width: 55%;
@@ -121,7 +115,7 @@
   
   // FigureHabilities
   .FigureHabilities {
-    @include DisplayFlexCustom();
+    @include variables.DisplayFlexCustom();
     height: 18.5vh;
     width: 9.5vw;
     border-radius: 10px 20px 0px;
@@ -136,7 +130,7 @@
       transform: scale(105%);
       object-fit: cover;
       background-color: #000;
-      border: solid 2px #00b100;
+      border: solid 2px variables.$DinamicText;
       filter: none;
     }
   }

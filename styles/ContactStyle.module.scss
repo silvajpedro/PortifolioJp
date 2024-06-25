@@ -1,10 +1,10 @@
+@use "./variables";
+
 .PhoneBox {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include variables.DisplayFlexCustom();
   flex-direction: column;
-  height: 115vh;
+  height: 100vh;
 }
 
 .PhoneTitle {
@@ -18,9 +18,7 @@
 
 .PhoneImageBox {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include variables.DisplayFlexCustom();
   h2,
   h4 {
     position: absolute;

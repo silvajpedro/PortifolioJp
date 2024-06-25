@@ -1,0 +1,11 @@
+// Variables
+$DefaultText: #ffff;
+$DinamicText: #00b100;
+$Binary_background: url('../public/Binary_background.jpg');
+
+// Mixins
+@mixin DisplayFlexCustom($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+  }

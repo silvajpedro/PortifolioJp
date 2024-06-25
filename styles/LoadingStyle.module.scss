@@ -1,0 +1,6 @@
+@use "./variables";
+
+.LoadingBox{
+    border: solid;
+    @include variables.DisplayFlexCustom();
+}

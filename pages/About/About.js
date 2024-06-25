@@ -4,6 +4,7 @@ import Image from "next/image.js";
 import styles from "../../styles/AboutStyle.module.scss"
 import Header from "../Header/Header.js";
 import Loading from "../Loading/Loading";
+import Head from "next/head";
 
 export default function About() {
 
@@ -14,8 +15,6 @@ export default function About() {
 
   const infoApi = useContext(PrismicContext)
 
-  console.log(infoApi)
-
   if (!infoApi) {
     return (
       <Loading />
@@ -24,30 +23,46 @@ export default function About() {
 
   return (
     <>
+      <Head>
+        <title>Sobre mim</title>
+        <link rel="icon" href="../favicon.ico" />
+      </Head>
+
       <Header />
+
       <main className="MainBox">
+
         <section className="ContentBox">
+
           <section className={styles.AboutMeBox}>
 
             <figure className={styles.MyImageBox}>
+
               <Image
                 className={styles.JoaoImage}
                 width={720}
                 height={750}
                 priority
                 src="/coding.png" alt="ilustração do joão" />
+
             </figure>
 
             <div className={styles.DescriptionBox}>
+
               <h2 className={styles.AboutMeTitle}>Sobre mim</h2>
+
               <p className={styles.AboutMeText}>
                 Sou João, um apaixonado por tecnologia e entusiasta de resolução de problemas e desafios, essas paixões acabaram me levando a trilhar o caminho da programação. Assim iniciei meus estudos em programação em março de 2022, onde aprendi os principais conceitos de front-end como HTML, CSS, JS e React fui colocando-os em prática em meus projetos. Com muita curiosidade e um toque de criatividade, me tornando cada vez mais fascinado pela área, pelos seus desafios e pelas suas infinitas possibilidades.
               </p>
+
             </div>
+
           </section>
 
           <section className={styles.HabilitiesBox}>
+
             <h2 className={styles.HabilitiesTitle}>Habilidades</h2>
+
             <div className={styles.TecnologiesBox}>
 
               <div className={styles.TecnologiesDescription}>
@@ -57,6 +72,7 @@ export default function About() {
                 <p>{guardaId.modal === true ? "Passe o mouse nos cards para ler" : infoApi.data.body1[0].items[guardaId.id].texto_habilidade[0].text}</p>
 
               </div>
+
               <div className={styles.TecnologiesImages}>
 
                 {infoApi.data.body1[0].items.map((item) => (
@@ -69,6 +85,7 @@ export default function About() {
                     }}
                     key={item.id}
                     style={{ backgroundImage: `url(${item.lightimage.url})` }}>
+                    
                     <Image
                       className={styles.HabilitiesImage}
                       width={148}
@@ -79,11 +96,17 @@ export default function About() {
                       alt={item.lightimage.alt} />
                   </figure>
                 ))}
+
               </div>
 
             </div>
+
           </section>
+
+        <Loading />
+
         </section>
+        
       </main>
     </>
   );

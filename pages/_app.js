@@ -4,6 +4,7 @@ import "../styles/GlobalStyle.scss"
 import PrismicConfig from "../Components/api/_prismicConfig";
 
 export default function App({ Component, pageProps }) {
+
   return (
     <>
       <PrismicProvider client={client}>

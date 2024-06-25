@@ -5,37 +5,38 @@ import styles from "../../styles/ProjectsStyle.module.scss"
 import Image from "next/image.js"
 import Header from "../Header/Header.js"
 import Contact from "./Contact/Contact.js"
+import Head from "next/head.js"
+import Loading from "../Loading/Loading.js"
 
 export default function Projects() {
 
     const infoApi = useContext(PrismicContext)
 
-    console.log(infoApi)
-
     if (!infoApi) {
         return (
-            <p>Carregando...</p>
+            <Loading/>
         )
     }
 
     return (
         <>
+        <Head>
+            <title>Projetos</title>
+            <link rel="icon" href="../favicon.ico" />
+        </Head>
+            
             <Header />
 
             <main className="MainBox">
                 <section className="ContentBox">
-
 
                     <section className={styles.CarroselBox}>
                         <h2>Projetos</h2>
 
                         <Carrosel className={styles.Carrosel}>
 
-                            {/* a caixa figure que vai alinhar cada um no seu quadrado 
-  verificar o estilo e tentar diminuir o máximo de linhas possível
-  arquivo carousel.jsx e project style.jsx */}
-
                             {infoApi.data.body[0].items.map((item, id) => (
+                                
                                 <figure key={id}>
 
                                     <Image
@@ -53,13 +54,21 @@ export default function Projects() {
                                         </nav>
 
                                     </div>
+
                                 </figure>
 
                             ))}
                         </Carrosel>
                     </section>
+
                     <Contact/>
+                
+                <address className={styles.AddressInfo}>
+                    <p>Desenvolvido por {"<Joao Pedro Belo/>"}</p>
+                </address>
+                
                 </section>
+            
             </main>
         </>
     )
