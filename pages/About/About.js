@@ -5,7 +5,7 @@ import styles from "../../styles/AboutStyle.module.scss"
 import Header from "../Header/Header.js";
 import Loading from "../Loading/Loading";
 
-export default function About({ data }) {
+export default function About() {
 
   const [guardaId, setGuardaId] = useState({
     id: null,

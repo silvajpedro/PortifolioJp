@@ -4,6 +4,7 @@ import { useContext } from "react"
 import styles from "../../styles/ProjectsStyle.module.scss"
 import Image from "next/image.js"
 import Header from "../Header/Header.js"
+import Contact from "./Contact/Contact.js"
 
 export default function Projects() {
 
@@ -57,6 +58,7 @@ export default function Projects() {
                             ))}
                         </Carrosel>
                     </section>
+                    <Contact/>
                 </section>
             </main>
         </>
