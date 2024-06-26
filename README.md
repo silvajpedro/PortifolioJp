@@ -16,6 +16,11 @@ Desenvolvido para oferecer uma experiência de usuário fluida e moderna. O proj
 
 - **Design Responsivo**: ainda em construção...🚧
 
+## Contato 📬
+
+Para dúvidas ou sugestões, entre em contato através do [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-pedro-belo/) ou envie um e-mail para [belojpedro.31@gmail.com](mailto:belojpedro.31@gmail.com).
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ### Obrigado por visitar meu portfólio! Espero que goste 😊
