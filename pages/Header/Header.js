@@ -39,7 +39,8 @@ export default function Header() {
             <Link href={"/Projects/Projects"}>{lang === "pt-br" || lang === null ? "Projetos" : "Projects"}</Link>
           </li>
 
-          <select onChange={(e) => {
+        </ul>
+          <select className={styles.Select} onChange={(e) => {
             localStorage.setItem("lang", e.target.value)
             location.reload()
           }}>
@@ -47,7 +48,6 @@ export default function Header() {
             <option value="pt-br">PT-BR</option>
             <option value="en-us">EN-US</option>
           </select>
-        </ul>
       </nav>
     </header>
   );
