@@ -1,9 +1,16 @@
 import Head from "next/head";
 import Header from "./Header/Header";
 import Typing from "./Typing/Typing";
+import { useEffect,useState } from "react";
 
 export default function Home() {
   
+  const [lang, setLang] = useState("pt-br")
+
+  useEffect(() => {
+    setLang(localStorage.getItem("lang"))
+  }, [])
+
   return (
     <>
       <>
@@ -20,7 +27,7 @@ export default function Home() {
           
           <section className="ContentBox">
           
-          <Typing FirstSentence="Oi, eu sou o João" SecondSentence="Desenvolvedor front-end."/>
+          <Typing FirstSentence={ lang === "pt-br" || lang === null ? "Oi, eu sou o João": "Hiii, I'm João"} SecondSentence={ lang === "pt-br" || lang === null ? "Desenvolvedor front-end.": "Front-end Developer."}/>
           
           </section>
         </main>

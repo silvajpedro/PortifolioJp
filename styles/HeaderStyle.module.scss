@@ -15,6 +15,11 @@
   nav {
     width: 100%;
   }
+
+  select{
+    background-color: variables.$DefaultText;
+    border-radius:4px;
+  }
 }
 
 .ul {

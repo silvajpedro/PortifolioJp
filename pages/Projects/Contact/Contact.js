@@ -6,6 +6,11 @@ export default function Contact() {
 
   const [modalCellPhone, setModalCellPhone] = useState(true);
   const [hour, setHour] = useState(new Date().toLocaleTimeString("pt-BR"))
+  const [lang, setLang] = useState("pt-br")
+
+  useEffect(() => {
+    setLang(localStorage.getItem("lang"))
+  }, [])
 
   const today = new Date().toLocaleDateString("pt-BR");
 
@@ -17,16 +22,20 @@ export default function Contact() {
 
   return (
     <section className={styles.PhoneBox}>
-      
-      <h2 className={styles.PhoneTitle}>
+
+      {lang === "pt-br" || lang === null ? <h2 className={styles.PhoneTitle}>
         {modalCellPhone ? "Desbloqueie o celular para entrar em contato" : "Fale comigo, vamos trocar uma ideia!"}
-      </h2>
+      </h2> : ""}
+
+      {lang === "en-us" ? <h2 className={styles.PhoneTitle}>
+        {modalCellPhone ? "Unlock the phone to get in touch." : "Talk to me, let's chat!"}
+      </h2> : ""}
 
       <div className={styles.PhoneImageBox}>
-       
+
         {modalCellPhone && <h2>{hour}</h2>}
         {modalCellPhone && <h4>{today}</h4>}
-        
+
         <Image
           width={668}
           height={722}
@@ -34,7 +43,7 @@ export default function Contact() {
           src={modalCellPhone ? "/Cellphone_block.png" : "/Cellphone.png"}
           alt="tela de celular" />
 
-        { !modalCellPhone && <nav>
+        {!modalCellPhone && <nav>
 
           <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-belo/" target="_blank">
             <img src="/Linkedin.svg" className={styles.ContactImages} alt="icone contato Linkedin" />
@@ -47,7 +56,7 @@ export default function Contact() {
           <a href="https://wa.me/5521983112220?text=Oiii,%20Jo%C3%A3o%20vi%20o%20seu%20Portf%C3%B3lio,%20vamos%20trocar%20uma%20ideia?" target="_blank">
             <img src="/Whatssap.svg" className={styles.ContactImages} alt="icone contato whatssap" />
           </a>
-        </nav> }
+        </nav>}
 
         <button
           className={styles.ButtonCellPhone}
