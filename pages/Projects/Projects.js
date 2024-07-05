@@ -55,8 +55,8 @@ export default function Projects() {
                                 <figure key={id}>
 
                                     <Image
-                                        width={1651}
-                                        height={1011}
+                                        width={1650}
+                                        height={1010}
                                         src={item.imagem_projeto.url} alt="imagem dos projetos do joao"
                                         onLoad={()=> handleImageLoad()}
                                     />
@@ -81,7 +81,7 @@ export default function Projects() {
                     <Contact />
 
                     <address className={styles.AddressInfo}>
-                        <p>{lang === "pt-br" || lang === null ? "Desenvolvido por <João Pedro Belo/>":"Made by <Joao Pedro Belo"}</p>
+                        <p>{lang === "pt-br" || lang === null ? "Desenvolvido por <João Pedro Belo/>":"Made by <Joao Pedro Belo/>"}</p>
                     </address>
 
                 </section>

@@ -18,13 +18,13 @@
   }
 
   img {
-    width: 57vw;
-    height: 115vh;
+    width: 51vw;
+    height: 110vh;
   }
 
   figure {
     @include variables.DisplayFlexCustom();
-    height: 79.5vh;
+    height: 79vh;
 
     &:hover {
       div {

@@ -6,9 +6,13 @@ import { useEffect, useState } from "react";
 export default function Header() {
 
   const [lang, setLang] = useState("pt-br")
+  const [modal,setModal] = useState("")
 
   useEffect(() => {
+
     setLang(localStorage.getItem("lang"))
+    setModal(localStorage.getItem("modal"))
+  
   }, [])
 
   console.log(lang)
@@ -40,14 +44,19 @@ export default function Header() {
           </li>
 
         </ul>
-          <select className={styles.Select} onChange={(e) => {
+        <select style={{backgroundColor: modal}}
+          className={styles.Select} 
+          onMouseOver={()=> setModal("#ffffff")}
+          onMouseOut={()=>{setModal(lang === "pt-br" || lang === "en-us" ? "transparent":"")}}
+          onChange={(e) => {
             localStorage.setItem("lang", e.target.value)
+            localStorage.setItem("modal","transparent")
             location.reload()
           }}>
           <option value=""></option>
-            <option value="pt-br">PT-BR</option>
-            <option value="en-us">EN-US</option>
-          </select>
+          <option value="pt-br">PT-BR</option>
+          <option value="en-us">EN-US</option>
+        </select>
       </nav>
     </header>
   );
