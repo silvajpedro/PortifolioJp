@@ -60,7 +60,7 @@ export default function About() {
 
               <p className={styles.AboutMeText}>
                 {lang === "pt-br" || lang === null ?
-                "Sou João, um apaixonado por tecnologia e entusiasta de resolução de problemas e desafios, essas paixões acabaram me levando a trilhar o caminho da programação. Assim iniciei meus estudos em programação em março de 2022, onde aprendi os principais conceitos de front-end como HTML, CSS, JS e React fui colocando-os em prática em meus projetos. Com muita curiosidade e um toque de criatividade, me tornando cada vez mais fascinado pela área, pelos seus desafios e pelas suas infinitas possibilidades.":"I am João, a technology enthusiast and passionate about problem-solving and challenges. These passions led me to pursue a path in programming. I started my programming studies in March 2022, where I learned the main front-end concepts such as HTML, CSS, JS, and React, and applied them to my projects. With a lot of curiosity and a touch of creativity, I became increasingly fascinated by the field, its challenges, and its endless possibilities."}
+                  "Sou João, um apaixonado por tecnologia e entusiasta de resolução de problemas e desafios, essas paixões acabaram me levando a trilhar o caminho da programação. Assim iniciei meus estudos em programação em março de 2022, onde aprendi os principais conceitos de front-end como HTML, CSS, JS e React fui colocando-os em prática em meus projetos. Com muita curiosidade e um toque de criatividade, me tornando cada vez mais fascinado pela área, pelos seus desafios e pelas suas infinitas possibilidades." : "I am João, a technology enthusiast and passionate about problem-solving and challenges. These passions led me to pursue a path in programming. I started my programming studies in March 2022, where I learned the main front-end concepts such as HTML, CSS, JS, and React, and applied them to my projects. With a lot of curiosity and a touch of creativity, I became increasingly fascinated by the field, its challenges, and its endless possibilities."}
               </p>
 
             </div>
@@ -77,9 +77,9 @@ export default function About() {
 
                 <h2>{guardaId.modal === true ? "" : infoApi.data.body1[0].items[guardaId.id].titulo_habilidades[0].text}</h2>
 
-               { lang === "pt-br" && <p>{guardaId.modal === true ? "Passe o mouse nos cards para ler" : infoApi.data.body1[0].items[guardaId.id].texto_habilidade[0].text}</p>}
-                
-                {lang === "en-us" && <p>{guardaId.modal === true ? "Hover over the cards to read." : infoApi.data.body1[0].items[guardaId.id].texto_habilidade_en[0].text}</p> }
+                {lang === null && <p>{guardaId.modal === true ? "Passe o mouse nos cards para ler" : infoApi.data.body1[0].items[guardaId.id].texto_habilidade[0].text}</p>}
+                {lang === "pt-br" && <p>{guardaId.modal === true ? "Passe o mouse nos cards para ler" : infoApi.data.body1[0].items[guardaId.id].texto_habilidade[0].text}</p>}
+                {lang === "en-us" && <p>{guardaId.modal === true ? "Hover over the cards to read." : infoApi.data.body1[0].items[guardaId.id].texto_habilidade_en[0].text}</p>}
 
               </div>
 
